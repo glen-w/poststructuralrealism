@@ -1,0 +1,83 @@
+baseURL: https://neunuebel.art
+title: poststructuralrealism
+defaultContentLanguage: 'en'
+theme: eternity
+#googleAnalytics: ''
+
+params:
+  image: /images/banner.png
+  logo: logo.jpg # put in /static/
+  subtitle: Carolyn Neunuebel
+
+  copyright: All rights reserved.
+  author: Carolyn Neunuebel
+
+  landing: false #turn landing page/on/off
+
+  portfolio:
+    columns:
+      desktop:
+        paint: 1
+        pencil: 2
+        photo: 3
+      mobile:
+        paint: 1
+        pencil: 2
+        photo: 3
+
+  socials:
+
+    - icon: 'far fa-envelope fa-lg'
+      url: 'caryneun@gmail.com'
+
+    - icon: 'fab fa-instagram fa-lg'
+      url: 'https://instagram.bora.sh/eternity'
+
+    - icon: 'fab fa-linkedin-in fa-lg'
+      url: 'https://linkedin.bora.sh/in/eternity'
+
+  homepage: "/work" # homepage link, mostly same with menu.main[0]
+
+#  specialPages:
+#    - work
+#    - archive
+
+  bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
+
+  disableWelcomePageBackground: false # disables the background image on the homepage
+
+#  plausible: '' # todo: set your plausible id.
+
+  disableRadius: true
+  moveIt: false  # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+menu:
+  main:
+    - name: paint
+      url: /paint/
+      weight: 1
+    - name: pencil
+      url: /tags/pencil/
+      weight: 2
+    - name: photos
+      url: /tags/photos/
+      weight: 3
+    - name: about
+      url: /about/
+      weight: 4
+    - name: contact
+      url: /contact/
+      weight: 5
